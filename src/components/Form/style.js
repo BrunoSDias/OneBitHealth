@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   form: {
     width: '100%',
     height: 'auto',
-    marginTop: 30,
+    marginTop: 10,
     padding: 10,
   },
   formLabel: {

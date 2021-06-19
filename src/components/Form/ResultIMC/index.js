@@ -10,7 +10,7 @@ const ResultIMC = (props) => {
     })
   }
 
-  return(
+  return (
     <View style={styles.contextImc}>
       <View style={styles.boxShareButton}>
         { props.resultImc !== null && 
