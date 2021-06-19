@@ -12,18 +12,16 @@ const ResultIMC = (props) => {
 
   return (
     <View style={styles.contextImc}>
-      <View style={styles.boxShareButton}>
-        { props.resultImc !== null && 
-          <TouchableOpacity
-            style={styles.shared}
-            onPress={onShare}
-          >
-            <Text style={styles.sharedText}>Compartilhar</Text>
-          </TouchableOpacity>
-        }
-      </View>
       <Text style={styles.information}>{props.messageResultImc}</Text>
       <Text style={styles.numberImc}>{props.resultImc}</Text>
+      <View style={styles.boxShareButton}>
+        <TouchableOpacity
+          style={styles.shared}
+          onPress={onShare}
+        >
+          <Text style={styles.sharedText}>Compartilhar</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }

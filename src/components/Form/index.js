@@ -48,11 +48,12 @@ const Form = () => {
   }
 
   return(
-    <Pressable 
+    <View 
       onPress={Keyboard.dismiss} 
       style={styles.formContext}
     >
-      <View style={styles.form}>
+      {imc === null && (
+        <Pressable style={styles.form}>
         <Text style={styles.formLabel}>Altura</Text>
         <Text style={styles.errorMessage}>{errorMessage}</Text>
         <TextInput
@@ -72,18 +73,18 @@ const Form = () => {
           keyboardType="numeric"
           style={styles.input}
         />
-        
-        <TouchableOpacity
-          style={styles.buttonCalculator}
-          onPress={() => {
-            validationImc()
-          }}
-        >
-          <Text style={styles.textButtonCalculator}>Calcular</Text>
-        </TouchableOpacity>
-        <ResultIMC messageResultImc={messageImc} resultImc={imc}/>
-      </View>
-    </Pressable>
+      </Pressable>
+      )}
+      {imc && <ResultIMC messageResultImc={messageImc} resultImc={imc}/>}
+      <TouchableOpacity
+        style={styles.buttonCalculator}
+        onPress={() => {
+          validationImc()
+        }}
+      >
+        <Text style={styles.textButtonCalculator}>{textButton}</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
 

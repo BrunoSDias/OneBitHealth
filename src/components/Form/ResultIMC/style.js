@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   contextImc: {
-    flex: 1,
     paddingTop: 20,
     borderRadius: 50,
     alignItems: 'center',
